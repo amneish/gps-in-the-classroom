@@ -7,6 +7,8 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage{float}
+\usepackage{setspace}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -38,23 +40,9 @@ Stanford, USA \\
 gracegao@stanford.edu}
 }
 
-\maketitle
-
-\iffalse
-\begin{itemize}
-    \item New tools available in the classroom with Android analysis tools
-    \item Showcase some of the possibilities with these new products
-    \item Structure of how Stanford teaches with the Android analysis tool
-    \item Showcase student work that has been done 
-    \item Student projects to present
-    \begin{itemize}
-        \item Brian Munguia's project on SVD
-        \item NLOS project from Scott and Riley
-        \item ...
-    \end{itemize}
-    \item Finish by talking about the merits of hands on learning
-\end{itemize}
-\fi
+\begin{singlespace}
+    \maketitle 
+\end{singlespace}
 
 Teaching any subject can be difficult, but teaching GNSS offers a unique set of challenges.
 GNSS is built upon a set of complex and interdisciplinary engineering achievements. 
@@ -78,19 +66,38 @@ The goal has been to help them explore the intersection between their passions a
 As a project based course, students learn of the different subsystems while they develop their own personal projects using the GNSS Analysis Tools.
 These projects can take inspiration from their current work and interests or they can be derived from any aspect of GNSS that piques their interest.
 They benefit greatly from their lack of experience in the field as it frees them to explore ideas that many of us might not pursue ourselves.
+Midway through the course, the students are prompted to create a project that uses the skills developed within the class and are given little direction during the initial brainstorming.
+There is some scoping and guidance from the instructors as the course goes on, but these projects are largely born of the student's own volition.
+
 This paper exhibits some of the projects that these students were able to accomplish in a mere matter of weeks.
+An example project includes the use of neural networks to improve position estimates on trajectories with non-Gaussian noise \cite{LSTM2018}.
+In this project, the authors were able to build and train a neural network to recognize simulated multipath error and then tested this network using real world data (See Figure \ref{LSTM}).
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6.5in, height=2.25in]{Figures/Mateh-LSTM.PNG}
+    \caption{LSTM performance in multipath environments}
+    \label{LSTM}
+\end{figure}
 
-Below are a few projects ideas and results that were carried out by the students.
+In another project, the authors used building models to reconstruct non-line-of-sight (NLOS) pseudoranges from obstructed satellites and project those NLOS signals on to "virtual satellites" in an effort to construct a more accurate PVT solution \cite{NLOS2018} (See Figure \ref{NLOS}).
 
-\textit{\textbf{Showcase several projects here}}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6.5in, height=2.25in]{Figures/NLOS-Table.PNG}
+    \caption{Position accuracies with NLOS corrections}
+    \label{NLOS}
+\end{figure}
 
+These projects and more will be presented to highlight the promise these modern tools bring to project oriented teaching.
 The goal of this paper is to serve as an inspiration to those teaching or considering teaching GNSS.
 Whether instructing undergraduates, graduates, or professionals, this paper presents some of the opportunities that arise when students have a chance to creatively pursue GNSS themselves.
 
 \begin{thebibliography}{00}
     \bibitem{vanDiggelen2018} Van Diggelen, Frank, and Mohammed Khider. "GNSS analysis tools from Google." Inside GNSS 13 (2018): 51. 
     \bibitem{GNSSAnalysisTools} https://github.com/google/gps-measurement-tools/releases/tag/2.0.0.1
+    \bibitem{LSTM2018} Kosec, Matej, and John Poothokaran. "Comparison of Kalman filters and LSTM networks for GPS trajectory smoothing in the presence of simulated multipath noise." Stanford GPS Class (2018).
+    \bibitem{NLOS2018} Pratz, Scott, and Riley Culberg. "NLOS Identification and Correction from Known Building Structures." Stanford GPS Class (2018).
     
 \end{thebibliography}
 
