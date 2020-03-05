@@ -28,7 +28,7 @@ San Mateo, USA \\
 tyler@xonaspace.com}
 \and
 \IEEEauthorblockN{Frank van Diggelen}
-\IEEEauthorblockA{\textit{Android Location} \\
+\IEEEauthorblockA{
 \textit{Google}\\
 Mountain View, USA \\
 fvandiggelen@google.com}
@@ -46,7 +46,7 @@ gracegao@stanford.edu}
 
 Teaching any subject can be difficult, but teaching GNSS offers a unique set of challenges.
 GNSS is built upon a set of complex and interdisciplinary engineering achievements. 
-The modernization of these systems today continues to push the boundaries of orbital mechanics, material science, modern physics, rocket science, and a host of other fields.
+The modernization of these systems today continues to push the boundaries of orbital mechanics, signal processing, modern physics, rocket science, and a host of other fields.
 But for all of the technological complexities of GNSS, it has turned into one of the most recognized and widely used utilities throughout the world.
 Everyone has become a capable "Navigator" through the simple act of owning a cell phone.
 So how does one boil all of this information down in to a 10 week graduate engineering course?
@@ -55,23 +55,23 @@ Furthermore, how does one go beyond giving students a theoretical background to 
 At Stanford, the GPS course has always strived to achieve proficiency in the theory and practice.
 The class has served as the inspiration to many who join the navigation profession and continue to lead in the field today.
 With the emergence of the GNSS Analysis Tools from Google \cite{vanDiggelen2018}, many new opportunities have arisen that allow students to explore the world of GNSS by following their passions and their own creativity.
-The GNSS Analysis Tools available on Android \cite{GNSSAnalysisTools}, allows anyone with an Android phone to record raw GNSS measurements.
+The GNSS Analysis Tools available on Android \cite{GNSSAnalysisTools}, allow anyone with an Android phone to record and analyze raw GNSS measurements.
 By raw GNSS measurements, we're not simply referring to pseudoranges.
 After all, a pseudorange is a derived measurement.
-True raw measurements are comprised of the time stamps associated with satellite signal reception and transmission, AGC, $C$/$N_0$, and other values used to generate a position, velocity, and time (PVT) solution.
+Truly raw measurements are comprised of the time stamps associated with satellite signal reception and transmission, $C$/$N_0$, and other values used to generate a position, velocity, and time (PVT) solution.
 With these measurements available to the masses, everyone can tinker and toy with real GNSS data and the Stanford GPS course has wholeheartedly embraced these new tools.
 
 Over the years, the course has been molded to enhance student engagement and encourage newcomers from diverse professional backgrounds. 
 The goal has been to help them explore the intersection between their passions and GNSS.
 As a project based course, students learn of the different subsystems while they develop their own personal projects using the GNSS Analysis Tools.
 These projects can take inspiration from their current work and interests or they can be derived from any aspect of GNSS that piques their interest.
-They benefit greatly from their lack of experience in the field as it frees them to explore ideas that many of us might not pursue ourselves.
+They even benefit from their lack of experience in the field as it frees them to explore ideas that many of us might not pursue ourselves.
 Midway through the course, the students are prompted to create a project that uses the skills developed within the class and are given little direction during the initial brainstorming.
 There is some scoping and guidance from the instructors as the course goes on, but these projects are largely born of the student's own volition.
 
 This paper exhibits some of the projects that these students were able to accomplish in a mere matter of weeks.
 An example project includes the use of neural networks to improve position estimates on trajectories with non-Gaussian noise \cite{LSTM2018}.
-In this project, the authors were able to build and train a neural network to recognize simulated multipath error and then tested this network using real world data (See Figure \ref{LSTM}).
+In this project, the students were able to build and train a neural network to recognize simulated multipath error and then tested this network using real world data (See Figure \ref{LSTM}).
 
 \begin{figure}[H]
     \centering
@@ -80,7 +80,7 @@ In this project, the authors were able to build and train a neural network to re
     \label{LSTM}
 \end{figure}
 
-In another project, the authors used building models to reconstruct non-line-of-sight (NLOS) pseudoranges from obstructed satellites and project those NLOS signals on to "virtual satellites" in an effort to construct a more accurate PVT solution \cite{NLOS2018} (See Figure \ref{NLOS}).
+In another project, the students used building models to reconstruct non-line-of-sight (NLOS) pseudoranges from obstructed satellites and project those NLOS signals on to "virtual satellites" in an effort to construct a more accurate PVT solution \cite{NLOS2018} (See Figure \ref{NLOS}).
 
 \begin{figure}[H]
     \centering
@@ -94,7 +94,7 @@ The goal of this paper is to serve as an inspiration to those teaching or consid
 Whether instructing undergraduates, graduates, or professionals, this paper presents some of the opportunities that arise when students have a chance to creatively pursue GNSS themselves.
 
 \begin{thebibliography}{00}
-    \bibitem{vanDiggelen2018} Van Diggelen, Frank, and Mohammed Khider. "GNSS analysis tools from Google." Inside GNSS 13 (2018): 51. 
+    \bibitem{vanDiggelen2018} van Diggelen, Frank, and Mohammed Khider. "GNSS analysis tools from Google." Inside GNSS 13 (2018): 51. 
     \bibitem{GNSSAnalysisTools} https://github.com/google/gps-measurement-tools/releases/tag/2.0.0.1
     \bibitem{LSTM2018} Kosec, Matej, and John Poothokaran. "Comparison of Kalman filters and LSTM networks for GPS trajectory smoothing in the presence of simulated multipath noise." Stanford GPS Class (2018).
     \bibitem{NLOS2018} Pratz, Scott, and Riley Culberg. "NLOS Identification and Correction from Known Building Structures." Stanford GPS Class (2018).
